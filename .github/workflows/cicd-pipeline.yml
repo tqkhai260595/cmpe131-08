@@ -1,5 +1,6 @@
 # A descriptive name for your workflow
 name: Node.js CI/CD Pipeline
+
 # --- Triggers ---
 # This section defines when the workflow will run.
 on:
