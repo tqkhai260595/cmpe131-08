@@ -73,7 +73,6 @@ jobs:
     # This job runs only after the image has been successfully pushed
     needs: build-and-push
     runs-on: ubuntu-latest
-    
     steps:
       - name: Deploy to production
         run: |
