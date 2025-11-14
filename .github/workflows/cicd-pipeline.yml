@@ -44,7 +44,9 @@ jobs:
     needs: build-and-test
     # This job should only run on a push to the main branch, not on pull requests
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
     runs-on: ubuntu-latest
+
     steps:
       # Step 1: Check out the repository code
       - name: Checkout repository
@@ -71,6 +73,7 @@ jobs:
     # This job runs only after the image has been successfully pushed
     needs: build-and-push
     runs-on: ubuntu-latest
+    
     steps:
       - name: Deploy to production
         run: |
